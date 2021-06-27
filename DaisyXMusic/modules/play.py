@@ -452,7 +452,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
 
 
-@Client.on_message(command("play") & other_filters)
+@Client.on_message(command("play2") & other_filters)
 async def play(_, message: Message):
     global que
     global useer
@@ -502,7 +502,7 @@ async def play(_, message: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        "\n\nOr manually add @Anievcplay assistant to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
