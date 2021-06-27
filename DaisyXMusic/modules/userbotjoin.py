@@ -24,7 +24,7 @@ from DaisyXMusic.helpers.decorators import errors
 from DaisyXMusic.services.callsmusic import client as USER
 from DaisyXMusic.config import SUDO_USERS
 
-@Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["userbotjoin2"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -53,7 +53,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @Anievcplay to your Group and try again</b>",
         )
         return
     await message.reply_text(
@@ -61,7 +61,7 @@ async def addchannel(client, message):
     )
 
 
-@USER.on_message(filters.group & filters.command(["userbotleave"]))
+@USER.on_message(filters.group & filters.command(["userbotleave2"]))
 @authorized_users_only
 async def rem(USER, message):
     try:
@@ -128,7 +128,7 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add @Anievcplay to your Group and try again</b>",
         )
         return
     await message.reply_text(
