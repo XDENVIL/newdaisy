@@ -44,7 +44,7 @@ async def update_admin(client, message: Message):
     await message.reply_text("❇️ Admin cache refreshed!")
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("pause2") & other_filters)
 @errors
 @authorized_users_only
 async def pause(_, message: Message):
@@ -58,7 +58,7 @@ async def pause(_, message: Message):
         await message.reply_text("▶️ Paused!")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("resume2") & other_filters)
 @errors
 @authorized_users_only
 async def resume(_, message: Message):
@@ -72,7 +72,7 @@ async def resume(_, message: Message):
         await message.reply_text("⏸ Resumed!")
 
 
-@Client.on_message(command("end") & other_filters)
+@Client.on_message(command("end2") & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
@@ -89,7 +89,7 @@ async def stop(_, message: Message):
         await message.reply_text("❌ Stopped streaming!")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("skip2") & other_filters)
 @errors
 @authorized_users_only
 async def skip(_, message: Message):
